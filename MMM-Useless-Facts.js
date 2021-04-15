@@ -1,1 +1,18 @@
-Module.register("MMM-Useless-Facts",{});
+Module.register("MMM-Useless-Facts",{
+    defaults: {
+        language: "en",
+        format: "json",
+        path: "random"
+    },
+    start: function () {
+
+    },
+    notificationReceived: function (noti, payload, sender) {
+        if (noti == "DOM_OBJECTS_CREATED") {
+            this.sendSocketNotification("INIT", this.config)
+        }
+    },
+    socketNotificationReceived: function (noti, payload) {
+        
+    },
+});
