@@ -5,6 +5,7 @@ Module.register("MMM-Useless-Facts",{
         path: "random",
         timer: 10000
     },
+    text: "Loading...",
     start: function () {
 
     },
@@ -17,6 +18,16 @@ Module.register("MMM-Useless-Facts",{
         if(noti=="GETDATA")
         {
             console.log(payload);
+            this.text=payload.text;
+            this.updateDom();
         }
     },
+    getDom: function () {
+		var wrapper = document.createElement("div");
+		wrapper.className = this.config.classes ? this.config.classes : "thin xlarge bright pre-line";
+		var element = document.createElement("span");
+        element.appendChild(document.createTextNode(this.text))
+		wrapper.appendChild(element);
+		return wrapper;
+	},
 });
