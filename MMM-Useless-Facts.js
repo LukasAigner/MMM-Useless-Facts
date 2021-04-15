@@ -1,7 +1,7 @@
 Module.register("MMM-Useless-Facts",{
     defaults: {
         language: "en",
-        format: "json",
+        format: "html",
         path: "random",
         timer: 10000
     },
