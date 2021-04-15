@@ -23,11 +23,11 @@ Module.register("MMM-Useless-Facts",{
         }
     },
     getDom: function () {
-		var wrapper = document.createElement("div");
-		wrapper.className = this.config.classes ? this.config.classes : "thin xlarge bright pre-line";
-		var element = document.createElement("span");
-        element.appendChild(document.createTextNode(this.text))
-		wrapper.appendChild(element);
+        var wrapper = document.createElement("div");
+        const fact=document.createElement("h1");
+        fact.className = "bright medium light fadeInFact";
+        fact.innerHTML = this.text;
+        wrapper.appendChild(fact);
 		return wrapper;
 	},
 });
