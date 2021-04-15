@@ -22,6 +22,11 @@ Module.register("MMM-Useless-Facts",{
             this.updateDom();
         }
     },
+    getStyles() {
+        return [
+            this.file('style.css')
+        ]
+    },
     getDom: function () {
         var wrapper = document.createElement("div");
         const fact=document.createElement("h1");
