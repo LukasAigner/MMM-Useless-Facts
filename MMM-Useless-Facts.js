@@ -1,0 +1,1 @@
+Module.register("MMM-Useless-Facts",{});
