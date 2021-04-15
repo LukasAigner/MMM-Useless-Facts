@@ -16,7 +16,7 @@ module.exports = NodeHelper.create({
             console.log(payload);
             if(this.init===false)
             {
-                this.interval=setInterval(this.getDataFromApi(this.url+this.config.path+"."+this.config.format+"?language="+this.config.language), config.timer);
+                this.interval=setInterval(() => this.getDataFromApi(this.url+this.config.path+"."+this.config.format+"?language="+this.config.language), config.timer);
             }
             this.init=true;
             
