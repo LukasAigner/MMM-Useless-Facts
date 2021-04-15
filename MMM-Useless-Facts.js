@@ -2,7 +2,8 @@ Module.register("MMM-Useless-Facts",{
     defaults: {
         language: "en",
         format: "json",
-        path: "random"
+        path: "random",
+        timer: 10000
     },
     start: function () {
 
