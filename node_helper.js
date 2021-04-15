@@ -12,8 +12,8 @@ module.exports = NodeHelper.create({
         if(noti==="INIT")
         {
             this.config=payload;
-            console.log(this.init);
-            console.log(payload);
+            //console.log(this.init);
+            //console.log(payload);
             if(this.init===false)
             {
                 this.interval=setInterval(() => this.getDataFromApi(this.url+this.config.path+"."+this.config.format+"?language="+this.config.language), this.config.timer);
@@ -25,9 +25,10 @@ module.exports = NodeHelper.create({
     getDataFromApi: function (url) {
         let settings = { method: "Get" };
         fetch(url, settings)
-        //.then(res => res.json())
+        .then(res => res.json())
         .then((json) => {
-            console.log(json);
+            //console.log(json);
+            this.sendSocketNotification("GETDATA", json);
         })
         .catch((error) => {
             console.error('Error:', error);

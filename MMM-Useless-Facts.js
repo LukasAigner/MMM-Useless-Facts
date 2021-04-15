@@ -1,7 +1,7 @@
 Module.register("MMM-Useless-Facts",{
     defaults: {
         language: "en",
-        format: "html",
+        format: "json",
         path: "random",
         timer: 10000
     },
@@ -14,6 +14,9 @@ Module.register("MMM-Useless-Facts",{
         }
     },
     socketNotificationReceived: function (noti, payload) {
-        
+        if(noti=="GETDATA")
+        {
+            console.log(payload);
+        }
     },
 });
