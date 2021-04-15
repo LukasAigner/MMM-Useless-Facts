@@ -1,0 +1,20 @@
+{
+    "name": "mmm-useless-facts",
+    "version": "1.0.0",
+    "description": "Load Random Facts for MagicMirror ",
+    "keywords": [
+      "magic mirror",
+      "module",
+      "random facts",
+      "useless facts"
+    ],
+    "author": "LukasAigner",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/LukasAigner/MMM-Useless-Facts.git"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {}
+}
