@@ -25,7 +25,7 @@ module.exports = NodeHelper.create({
     getDataFromApi: function (url) {
         let settings = { method: "Get" };
         fetch(url, settings)
-        .then(res => res.json())
+        //.then(res => res.json())
         .then((json) => {
             console.log(json);
         })
